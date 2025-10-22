@@ -46,7 +46,6 @@ body {
     background-color: #E50815;
     height: 400px;
     width: 80px;
-    right: 0px;
     top: 400px;
     left: 300px;
     position: absolute; 
@@ -230,7 +229,7 @@ body {
         transform: scale(1) rotate(0);
     }
     100% {
-        transform: scale(22) rotate(-20deg);
+        transform: scale(50) rotate(-18deg);
     }
 }
 
