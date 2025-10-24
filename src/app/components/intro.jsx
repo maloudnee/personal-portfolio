@@ -3,9 +3,6 @@ import '../styles/intro.css';
 
 export default function Intro({ onFinish }) {
     useEffect(() => {
-        const audio = new Audio('/public/sounds/brotherlaughing.m4a');
-        audio.play();
-
         const timer = setTimeout(() => {
             if (onFinish) onFinish();
         }, 5000);
@@ -14,31 +11,24 @@ export default function Intro({ onFinish }) {
     }, [onFinish]);
 
     return (
-        <div className="intro">
-        {/* Paint M */}
-        <div className="m-1"></div>
-        <div className="m-4"></div>
-        <div className="m-2">
-            <div className="filler-1"></div>
-            <div className="m-3">
-                <div className="filler-2"></div>
+        <div className="container">
+            <div className="intro">
+                <span className="mLeft"></span>
+                <span className="mLeft-Diagonal"></span>
+                <span className="mRight-Diagonal"></span>
+                <span className="mRight"></span>
             </div>
 
-            {/* Paint A */}
-            <div className="a-1">
-                <div className="filler-3"></div>
-            <div className="a-2">
-                <div className="filler-4">
-                </div>
-                </div>
+            <div className="intro">
+                <span className="aCross"></span>
+                <span className="aLeft"></span>
+                <span className="aRight"></span>
             </div>
-            <div className="a-3">
+
+            <div className="intro">
+                <span className="lVertical"></span>
+                <span className="lHorizontal"></span>
             </div>
-        </div>
-        
-            {/* Paint L */}
-            <div className="l-1"></div>
-            <div className="l-2"></div>
-        </div> 
+        </div>  
     );
 }
