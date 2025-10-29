@@ -1,5 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import { DynaPuff } from "next/font/google";
+import 'bootstrap/dist/css/bootstrap.css';
 import "./globals.css";
+import NavBar from "../components/navbar.jsx";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -8,6 +12,12 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const dynaPuff = DynaPuff({
+  variable: "--font-dynapuff",
+  weight: ['400', '700'],
   subsets: ["latin"],
 });
 
@@ -20,9 +30,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dynaPuff.variable} antialiased pt-14`}
       >
         {children}
+        <NavBar />
       </body>
     </html>
   );

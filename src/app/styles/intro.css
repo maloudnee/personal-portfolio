@@ -1,6 +1,5 @@
-html, 
-
-body {
+.wrapper {
+    position: relative;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -8,22 +7,27 @@ body {
     justify-content: center;
     background-color: black;
     color: white;
-} 
-
+    z-index: 9998;
+}
 .container {
     display: flex;
     align-items: center; 
     justify-content: center;
     max-width: 100vw; 
     min-width: 100px; 
+    animation: anim-fade-out 0.3s linear forwards 1.3s;
 }
 
 .intro {
     position: relative;
-    width: 8%;
-    padding-top: 10%;
+    width: 10%;
+    padding-top: 15%;
     height: 0;
     flex-shrink: 0;
+    animation: 
+        anim-pan-left 0.2s linear forwards 0.4s,
+        anim-box-shadow 0.2s linear forwards 0.6s;
+
 }
     
 .intro span{
@@ -36,7 +40,8 @@ body {
 .mLeft {
     left: 0;
     bottom: 0;
-    animation: anim 0.2s linear forwards 0.3s;
+    animation: 
+        anim 0.2s linear forwards 0.3s;
 }
 
 .mLeft-Diagonal{
@@ -47,7 +52,9 @@ body {
     transform-origin: 0% 0%;
     box-shadow: 0 0 20px #000;
     z-index: 2;
-    animation: anim 0.2s linear forwards 0.4s;
+    animation: 
+        anim 0.2s linear forwards 0.4s,
+        anim-box-fade 0.2s linear forwards 0.5s;
 }
 
 .mRight-Diagonal{
@@ -58,7 +65,9 @@ body {
     transform-origin: 0% 0%;
     box-shadow: 0 0 20px #000;
     z-index: 2;
-    animation: anim 0.2s linear forwards 0.5s;
+    animation: 
+        anim 0.2s linear forwards 0.5s,
+        anim-box-fade 0.2s linear forwards 0.6s;
 }
 
 .mRight{
@@ -70,12 +79,15 @@ body {
 .aLeft {
     position: fixed;
     top: 0;
-    left: 37%;
+    left: 41%;
     transform: skewX(-10deg);
     transform-origin: 0% 0%;
     box-shadow: 0 0 20px #000;
     z-index: 2;
-    animation: anim 0.2s linear forwards 0.7s;
+    animation: 
+        anim 0.2s linear forwards 0.7s,
+        anim-box-fade 0.2s linear forwards 0.8s;
+
 }
 
 .aRight {
@@ -86,7 +98,9 @@ body {
     transform-origin: 0% 0%;
     box-shadow: 0 0 20px #000;
     z-index: 2;
-    animation: anim 0.2s linear forwards 0.8s;
+    animation: 
+        anim 0.2s linear forwards 0.8s,
+        anim-box-fade 0.2s linear forwards 0.9s;
 }
 
 .intro .aCross {
@@ -106,7 +120,10 @@ body {
     bottom: 0;
     box-shadow: 0 0 20px #000;
     z-index: 2;
-    animation: anim 0.2s linear forwards 1s;
+    animation: 
+        anim 0.2s linear forwards 1s,
+        anim-box-fade 0.2s linear forwards 1.1s;
+
 }
 
 .intro .lHorizontal {
@@ -124,12 +141,20 @@ body {
     background: #000;
     content: '';
     width: 130%;
-    height: 15%;
+    height: 16%;
     border-radius: 90%;
     position: absolute;
-    left: -2%;
+    left: -10%;
     bottom: -10%;
     z-index: 5;
+}
+
+.glitch {
+    opacity: 0;
+    animation:
+        anim-fade-in 0.2s linear forwards 1.2s,
+        anim-fade-in 0.2 linear forwards 1.4s,
+        anim-fade-out 0.2s ease-in forwards 1.5s;
 }
 
 @keyframes anim {
@@ -147,5 +172,44 @@ body {
 @keyframes anim-3 {
     100% {
         height: 30%;
+    }
+}
+
+@keyframes anim-pan-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-10);
+    }
+}
+
+@keyframes anim-box-fade {
+    0% {
+        box-shadow: 0 0 20px #000;
+    }
+    100% {
+        box-shadow: 0 0 0 #000;
+    }
+}
+
+@keyframes anim-fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes anim-fade-in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
     }
 }
