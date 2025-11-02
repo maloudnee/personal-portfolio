@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Intro from "../components/intro.jsx";
 import "../app/styles/home.css";
 import Link from "next/link";
-import Squares from '../components/Squares.jsx';
+import TextType from "../components/TextType.jsx";
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(false);
@@ -39,23 +39,13 @@ export default function Home() {
 
   return (
     <>
-     <div 
-        className="fixed top-0 left-0 w-screen h-screen z-0" 
-      >
-        <Squares 
-        speed={0.5} 
-        squareSize={40}
-        direction='down'
-        borderColor='#df0001'
-        hoverFillColor='#d75858'/>
-      </div>
-      <div className="home-container">
-        <div className="spotify">
+      <div id="home" className="bg-[#000223] min-h-screen flex flex-col items-center justify-center text-white p-4 sm:p-8 mx-auto relative z-10">
+        <div className="spotify w-full max-w-lg mb-[-5rem] sm:mb-[-8rem]">
         <iframe 
         data-testid="embed-iframe" 
         style={{ borderRadius: "12px" }} 
-        src="https://open.spotify.com/embed/track/34j4OxJxKznBs88cjSL2j9?utm_source=generator&theme=0" 
-        width="100%" height="152" 
+        src="https://open.spotify.com/embed/track/7BdB5ZFpxHhafOAIisN2gX?utm_source=generator&theme=0" 
+        width="100%" height="90" 
         frameBorder="0" 
         allowFullScreen="" 
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
@@ -63,7 +53,7 @@ export default function Home() {
         ></iframe>
         </div>
 
-        <div className="chibi-mal-vibing">
+        <div className="chibi-mal-vibing w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 shrink-0 mb-8 relative">
             <img className="frame-1" src="/images/the-glory-1.png" alt="frame-1"></img>
             <img className="frame-2" src="/images/the-glory-2.png" alt="frame-2"></img>
             <img className="frame-3" src="/images/the-glory-3.png" alt="frame-3"></img>
@@ -72,21 +62,27 @@ export default function Home() {
             <img className="frame-6" src="/images/the-glory-6.png" alt="frame-6"></img>
         </div>
 
-        <div className="my-name">
-            <h1>Maloudnee Marcier</h1>
+        <p className="flex items-center font-ntr text-2xl sm:text-3xl lg:text-3xl font-semiBold">Hi my name is </p>
+        <h1 className="flex items-center font-dynapuff text-red-500 text-4xl sm:text-5xl lg:text-6xl font-extrabold">MALOUDNEE MARCIER</h1>
+
+        <h2 className="sm:text-sm lg:text-2xl text-white font-roboto">/ ma-lood-knee mar-si-air /</h2>
+
+        <div className="lil-tidbit mt-[1rem]">
+          <TextType 
+            className="text-2xl sm:text-3xl lg:text-4xl font-ntr font-semibold"
+            text={["Student", "Researcher", "Tech Enthusiast", "Aspiring Machine Learning Engineer"]}
+            typingSpeed={75}
+            pauseDuration={1500}
+            showCursor={true}
+            cursorCharacter="|"
+          />
         </div>
 
-        <div className="my-name-pronunciation">
-            <h2>/ ma-lood-knee mar-si-air /</h2>
+        <div className="mt-5">
+            <Link href="/about">
+              <button className="bg-red-500 text-white py-2 px-4 !rounded-lg hover:bg-red-600 transition">Learn More About Me</button>
+            </Link>
         </div>
-
-        <div className="lil-tidbit">
-          <p> Hey, I enjoy creating and learning new stuff. </p>
-        </div>
-
-        <Link href="/about">
-          <button className="learn-more-button">Learn More About Me</button>
-        </Link>
       </div>
     </>
   );

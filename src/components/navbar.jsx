@@ -1,69 +1,84 @@
-// components/navbar.jsx
-
 "use client";
 import Link from "next/link";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import 'bootstrap/dist/css/bootstrap.css';
+import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
-export default function NavBar() {
+const NavBar = () => {
+    const [ isMenuOpen, setIsMenuOpen ] = useState(false);
     return (
-        <Navbar expand="lg" bg="dark" variant="dark" fixed="top" className="z-[9999]">
-            <Container>
-                <Navbar.Brand as={Link} href="/">
-                    <img
-                    src="/images/logo-sort-of.png"
-                    alt="logo"
-                    width="250"
-                    height="250"
-                    className="d-inline-block align-top"
-                    />
-                </Navbar.Brand>
+        <header className="fixed top-0 left-0 w-full bg-[#000223] px-5 py-4 z-50">
+            
+            <div className="flex items-start justify-between max-w-full mx-auto">
+                
+                <div className="flex items-center space-x-8"> 
+                    
+                    <Link href="/" className="hover:cursor-pointer transition">
+                        <img src="/images/logo-sort-of.png" alt="logo" className="h-8"></img>
+                    </Link>
 
-                <Navbar.Toggle aria-controls="navbar-nav" />
-                <Navbar.Collapse id="navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link as={Link} href="/about">
-                            About
-                        </Nav.Link>
-                        <Nav.Link as={Link} href="/experience">
-                            Experience
-                        </Nav.Link>
-                        <Nav.Link as={Link} href="/projects">
-                            Projects
-                        </Nav.Link>
-                    </Nav>
+                    <nav className="hidden md:flex items-center space-x-6 text-[#2D324F] font-ntr text-2xl">
+                        <Link href="/about" className="hover:text-red-400 transition">About</Link>
+                        <Link href="/experience" className="hover:text-red-400 transition">Experience</Link>
+                        <Link href="/projects" className="hover:text-red-400 transition">Projects</Link>
+                    </nav>
+                </div>
 
-                    <Nav className="ms-auto d-flex align-items-center gap-3">
-                        <a
-                        href="https://github.com/maloudnee"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white fs-4"
-                        >
-                            <FaGithub size={22} color="#d75858" />
-                        </a>
+                <div className="hidden md:flex items-center space-x-4 text-[#2D324F]">
+                    <a href="https://github.com/maloudnee" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition">
+                        <FaGithub className="w-5 h-5" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/maloudneemarcier" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition">
+                        <FaLinkedin className="w-5 h-5" />
+                    </a>
+                    <a href="mailto:marciermaloudnee@gmail.com" className="hover:text-red-400 transition">
+                        <FaEnvelope className="w-5 h-5" />
+                    </a>
+                </div>
 
-                        <a
-                        href="https://www.linkedin.com/in/maloudneemarcier/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white fs-4"
-                        >
-                            <FaLinkedin size={22} color="#d75858"/>
-                        </a>
+                <button 
+                className="md:hidden text-white" 
+                onClick={() => setIsMenuOpen(true)}
+                >
+                    <FaBars className="w-6 h-6" />
+                </button>
+            </div>
 
-                        <a
-                        href="mailto:marciermaloudnee@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white fs-4"
-                        >
-                            <FaEnvelope size={22} color="#d75858"/>
-                        </a>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+            <div 
+            className={`
+                fixed top-0 right-0 w-full h-full bg-[#000223] z-[51] transform transition-transform duration-300
+                ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} 
+                md:hidden 
+            `}
+            >
+                <div className="flex justify-end p-5">
+                    <button 
+                        className="text-red-400" 
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        <FaTimes className="w-8 h-8" />
+                    </button>
+                </div>
+
+                <nav className="flex flex-col items-center space-y-10 mt-16 font-ntr text-3xl">
+                    <Link href="/about" className="text-white hover:text-red-400" onClick={() => setIsMenuOpen(false)}>About</Link>
+                    <Link href="/experience" className="text-white hover:text-red-400" onClick={() => setIsMenuOpen(false)}>Experience</Link>
+                    <Link href="/projects" className="text-white hover:text-red-400" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+                </nav>
+
+                <div className="flex items-center justify-center space-x-6 text-white mt-16">
+                    <a href="https://github.com/maloudnee" target="_blank" rel="noopener noreferrer" className="hover:text-red-400">
+                        <FaGithub className="w-8 h-8" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/maloudneemarcier" target="_blank" rel="noopener noreferrer" className="hover:text-red-400">
+                        <FaLinkedin className="w-8 h-8" />
+                    </a>
+                    <a href="mailto:marciermaloudnee@gmail.com" className="hover:text-red-400">
+                        <FaEnvelope className="w-8 h-8" />
+                    </a>
+                </div>
+            </div>
+        </header>
     );
-}
+}    
+
+export default NavBar;
