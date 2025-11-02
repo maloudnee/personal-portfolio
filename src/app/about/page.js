@@ -13,18 +13,18 @@ export default function About() {
                 <div className="md:w-3/5 ml-5 md:ml-10 space-y-5">
                         <div className="font-roboto text-white text-lg space-y-5">
                             <p>
-                            I am an undergraduate pursuing a Bachelor of Science in Computer Science at the University of Central Florida, 
-                            driven by a vision: to become a machine learning engineer and use innovation to enhance lives everywhere. 
-                            Growing up, being introduced to new technologies that made my life and those around me's lives easier captivated me. 
-                            The possibilities of technology are endless and can change the world for the better when used ethically.
+                            I am an undergraduate pursuing a Bachelor of Science in Computer Science at the University of Central Florida. I am driven 
+                            by a vision: to become a machine learning engineer and use innovation to enhance lives everywhere. Growing up, I was captivated 
+                            by new technologies that made life easier for me and those around me. The possibilities of technology are endless and can change 
+                            the world for the better when used ethically.
                             </p>
 
                             <p>
-                            I am an avid learner and always am looking to learn and expand my knowledge. One of the reasons I chose computer science 
-                            is that the learning never ends in this field; something new is always being introduced. I am currently a mentee in my software 
-                            development club, KnightHacks, where I have been learning more about the tech industry. My time as a mentee has been helping me 
-                            grow as an engineer. I am also getting involved in research, where my understanding of AI has been growing tremendously. 
-                            The current technologies I have been exploring and trying to gain a better understanding of are:
+                            I am an avid learner and always look to expand my knowledge. I chose computer science because the learning never stops; 
+                            new ideas are constantly being introduced. I am a mentee in my software development club, KnightHacks, where I have been learning 
+                            more about the tech industry. My time as a mentee has helped me grow as an engineer. I am also getting involved in research, 
+                            which has significantly expanded my understanding of AI. Currently, I am exploring technologies and trying to understand them 
+                            better, such as:
                             </p>
                         </div>
 
