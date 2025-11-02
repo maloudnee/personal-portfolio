@@ -10,7 +10,7 @@ export default function About() {
                 <div className="w-2/3 md:w-1/4 h-auto md:mt-0 hidden md:block">
                     <img className="object-cover border-4 border-solid border-red-500 mt-5" style={{ borderRadius: "12px" }} src="/images/second-option.jpg" alt="a picture of me"></img>
                 </div>
-                <div className="md:w-3/5 ml-10 space-y-5">
+                <div className="md:w-3/5 ml-5 md:ml-10 space-y-5">
                         <div className="font-roboto text-white text-lg space-y-5">
                             <p>
                             I am an undergraduate pursuing a Bachelor of Science in Computer Science at the University of Central Florida, 
@@ -20,7 +20,7 @@ export default function About() {
                             </p>
 
                             <p>
-                            I am an avid learner and always am looking to learn and expand my knowledge. One of the reasons I chose a field in computer science 
+                            I am an avid learner and always am looking to learn and expand my knowledge. One of the reasons I chose computer science 
                             is that the learning never ends in this field; something new is always being introduced. I am currently a mentee in my software 
                             development club, KnightHacks, where I have been learning more about the tech industry. My time as a mentee has been helping me 
                             grow as an engineer. I am also getting involved in research, where my understanding of AI has been growing tremendously. 
