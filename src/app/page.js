@@ -6,36 +6,36 @@ import Link from "next/link";
 import TextType from "../components/TextType.jsx";
 
 export default function Home() {
-  const [showIntro, setShowIntro] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [showIntro, setShowIntro] = useState(false);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const seenIntro = sessionStorage.getItem("hasSeenIntro");
-    console.log("Inside useEffect, seenIntro:", seenIntro);
+  // useEffect(() => {
+  //   const seenIntro = sessionStorage.getItem("hasSeenIntro");
+  //   console.log("Inside useEffect, seenIntro:", seenIntro);
 
-    if (!seenIntro) {
-      setShowIntro(true);
-      setIsLoading(false);
-      sessionStorage.setItem("hasSeenIntro", "true");
+  //   if (!seenIntro) {
+  //     setShowIntro(true);
+  //     setIsLoading(false);
+  //     sessionStorage.setItem("hasSeenIntro", "true");
 
-      const timer = setTimeout(() => {
-        setShowIntro(false);
-      }, 3000);
+  //     const timer = setTimeout(() => {
+  //       setShowIntro(false);
+  //     }, 3000);
 
-      return () => clearTimeout(timer);
-    } else {
-      setIsLoading(false);
-    }
-  }, []);
-  console.log("Show intro:", showIntro, "Loading:", isLoading);
+  //     return () => clearTimeout(timer);
+  //   } else {
+  //     setIsLoading(false);
+  //   }
+  // }, []);
+  // console.log("Show intro:", showIntro, "Loading:", isLoading);
 
-  if (isLoading) {
-    return null;
-  }
+  // if (isLoading) {
+  //   return null;
+  // }
 
-  if (showIntro) {
-    return <Intro />; 
-  } 
+  // if (showIntro) {
+  //   return <Intro />; 
+  // } 
 
   return (
     <>
