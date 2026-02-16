@@ -1,64 +1,60 @@
+import { FaPython, FaJava, FaSwift, FaJs, FaHtml5, FaCss3, FaPhp, FaDatabase } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 export default function About() {
     return (
-        <div id="about" className="bg-[#000223] min-h-screen w-screen text-white px-2 md:px-6">
-            <div className="flex items-center gap-4">
-                <h1 className="font-ntr text-red-500 font-bold text-7xl py-4">About Me</h1>
-                <img className="w-20 h-20 object-contain" src="/images/about-me-chibi.png" alt="chibi pic of me"></img>
+       <div id="about" className="box-border flex lg:flex-row lg:gap-[5vw] min-h-screen max-w-full px-[2vw] bg-[#510400] items-center">
+
+            <div className="flex flex-start flex-col space-y-7 text-white max-w-screen"> 
+                <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                    <p className="font-robto text-3xl md:text-4xl text-[#ddc5ad] font-bold">/ about-me</p>
+                </motion.div>
+
+                <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                    <p className="text-sm md:text-md font-be-vietnam-pro">
+                        I am an undergraduate computer science student at the University of Central Florida who loves building.
+                        I aim to build software that can make a positive impact on people's lives. I'm 
+                        especially interested in computer vision and machine learning. What excites me the most about the 
+                        field of computer science is the constant opportunity to learn and grow, as well as the ability to create 
+                        innovative solutions to complex problems. 
+                    </p>
+                </motion.div>
+
+                <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                    <p className="text-sm md:text-md font-be-vietnam-pro">
+                        Some tech skills I've picked up along the way: 
+                    </p>
+                </motion.div>
+
+
+                <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                    <div className="flex flex-row gap-7 text-xl md:text-3xl">
+                        <FaPython title="Python" className="text-[#DDC4AD] hover:"/>
+                        <FaJava title="Java" className="text-[#DDC4AD]"/>
+                        <FaSwift title="Swift" className="text-[#DDC4AD]"/>
+                        <FaJs title="JavaScript" className="text-[#DDC4AD]"/>
+                        <FaHtml5 title="HTML" className="text-[#DDC4AD]"/>
+                        <FaCss3 title="CSS" className="text-[#DDC4AD]"/>
+                        <FaPhp title="PHP" className="text-[#DDC4AD]"/>
+                        <FaDatabase title="MySQL" className="text-[#DDC4AD]"/>
+                    </div>
+                </motion.div>
+
+                <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                    <p className="text-sm md:text-md font-be-vietnam-pro">
+                        Outside of tech, I enjoy reading, traveling, and learning new languages. Maintenat, je parle un peu français. 日本語次!
+                    </p>
+                </motion.div>
+
             </div>
 
-            <div className="flex flex-col md:flex-row md:flex-row gap-16 items-start">
-                <div className="w-2/3 md:w-1/4 h-auto md:mt-0 hidden md:block">
-                    <img className="object-cover border-4 border-solid border-red-500 mt-5" style={{ borderRadius: "12px" }} src="/images/second-option.jpg" alt="a picture of me"></img>
+            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                <div className="hidden md:flex md:flex-shrink-0">
+                    <img src="/images/about-pic.png" alt="me" className="w-6xl object-contain" />
                 </div>
-                <div className="md:w-3/5 ml-5 md:ml-10 space-y-5">
-                        <div className="font-roboto text-white text-lg space-y-5">
-                            <p>
-                            I am an undergraduate pursuing a Bachelor of Science in Computer Science at the University of Central Florida. I am driven 
-                            by a vision: to become a machine learning engineer and use innovation to enhance lives everywhere. Growing up, I was captivated 
-                            by new technologies that made life easier for me and those around me. The possibilities of technology are endless and can change 
-                            the world for the better when used ethically.
-                            </p>
+            </motion.div>
 
-                            <p>
-                            I am an avid learner and always look to expand my knowledge. I chose computer science because the learning never stops; 
-                            new ideas are constantly being introduced. I am a mentee in my software development club, KnightHacks, where I have been learning 
-                            more about the tech industry. My time as a mentee has helped me grow as an engineer. I am also getting involved in research, 
-                            which has significantly expanded my understanding of AI. Currently, I am exploring technologies and trying to understand them 
-                            better, such as:
-                            </p>
-                        </div>
-
-                    <div className="w-full flex justify-start gap-8 font-roboto text-lg space-y-5">
-                        <ul className="flex flex-col gap-2 list-none p-0">
-                            <li className="relative before:content-['➢'] before:text-[#d75858] before:mr-2">Next.js</li>
-                            <li className="relative before:content-['➢'] before:text-[#d75858] before:mr-2">Tailwind CSS</li>
-                            <li className="relative before:content-['➢'] before:text-[#d75858] before:mr-2">Swift</li>
-                        </ul>
-
-                        <ul className="flex flex-col gap-2 list-none p-0">
-                            <li className="relative before:content-['➢'] before:text-[#d75858] before:mr-2">SQL</li>
-                            <li className="relative before:content-['➢'] before:text-[#d75858] before:mr-2">RAG</li>
-                            <li className="relative before:content-['➢'] before:text-[#d75858] before:mr-2">TensorFlow</li>
-                        </ul>
-                    </div>
-
-                    <div className="mt-4 font-roboto text-lg space-y-5">
-                        <p>
-                        Outside of tech, my hobbies include painting, playing Sudoku, reading, and binge-watching– I love consuming media that has a 
-                        compelling story. I am also in the process of learning how to play chess because I love games that require me to think. 
-                        I find that they help me grow overall as a person.
-                        </p>
-
-                        <p>
-                        Je parle aussi français, mais je le parle un peu de mal en ce moment. Je suis Haïtien alors je l’apprends maintenant.
-                        </p>
-
-                        <p>
-                        日本人も!
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
     );
+    
 }

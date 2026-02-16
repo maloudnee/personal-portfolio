@@ -1,135 +1,141 @@
 "use client";
-import React, { useState } from 'react';
-import ElectricBorder from '../../components/ElectricBorder.jsx';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Experience() {
-    const experiences = [
-        {
-            id: 0, 
-            company: 'Interactive Computing Experiences Research Cluster @ UCF', 
-            title: 'Undergraduate Research Assistant –– ', 
-            duration: 'OCTOBER 2025 –– PRESENT',
-            responsibilities: [
-                'Assisting with research focused on AI-assisted communication for individuals with speech impediments.',
-                'Preprocessing datasets, preparing raw data for model training and analysis.',
-                'Reviewing and synthesizing LLM and generative AI literature to build foundational understanding for ongoing experiments.',
-                'Collaborating with researchers to document findings and improve data reliability for future testing.'
-            ],
-            skills: [
-                'Python',
-                'Data Preprocessing', 
-                'Research Analysis',
-                'Machine Learning',
-                'Communication'
-            ]
-        },
-        {
-            id: 1,
-            company: 'Synthetic Reality Lab @ UCF',
-            title: 'Technical Editor –– ',
-            duration: 'SEPTEMBER 2024 –– NOVEMBER 2024',
-            responsibilities: [
-                'Editied technical papers for grammar, clarity, and consistency with publication standards.',
-                'Collaborated with authors to strengthen technical explanations and streamline document flow.',
-                'Reviewed citations, formatting, and visual content for professional accuracy.',
-                'Consolidated and refined content from 10+ research papers on augmented reality to produce a cohesive technical report.'
-            ],
-            skills: [
-                'Attention to Detail',
-                'Technical Writing',
-                'Communication',
-                'Document Formatting',
-                'Editing'
-            ]
-        }
-    ]
+  const experiences = [
+    {
+      company: "University of Central Florida",
+      title: "Undergraduate Research Assistant @",
+      dates: "Oct 2025 - Feb 2026",
+      bullets: [
+        "Processed and structured 1,000+ data samples for training and evaluating generative AI models focused on assistive technologies.",
+        "Built Python data pipelines to automate preprocessing and feature extraction, reducing manual data handling and iteration time.",
+        "Collaborated with lab peers to refine AI training sets, specifically targeting the improvement of real-world accessibility for users with speech impairments.",
+      ],
+    },
+    {
+      company: "Synthetic Reality Lab",
+      title: "Technical Writer @",
+      dates: "Sept 2023 - Nov 2023",
+      bullets: [
+        "Edited technical manuscripts for grammar, clarity, and adherence to publication standards.",
+        "Partnered with authors to refine technical explanations and improve logical flow, enhancing the overall quality of research papers.",
+        "Verified citations and formatting to ensure accuracy and consistency across manuscripts, contributing to the lab's successful publication record.",
+      ],
+    },
+  ];
 
-    const [activeTabId, setActiveTabId] = useState(experiences[0].id);
+  const [active, setActive] = useState(0);
 
-    return(
-        <div className="bg-[#000223] min-h-screen w-screen text-white px-2 md:px-6">
-            <div className="flex items-center gap-4">
-                <h1 className="font-ntr text-red-500 font-bold text-5xl md:text-7xl md:py-4">Experience</h1>
-                <img className="w-30 h-30 object-contain" src="/images/experience-chibi.png" alt="chibi of me and travon"></img>
-            </div>
-            <p className="mb-5 font-roboto text-md md:text-lg">A summary of experiences I feel have helped shape the engineer I'm working to become.</p>
-            <div className="flex flex-col h-[700px] md:flex-row md:max-w-7xl md:h-[400px] ml-4">
-                <div className="w-full flex flex-row border-b overflow-x-auto md:w-1/4 md:flex-col md:border-r border-[#000223] p-0 md:overflow-y-auto">
-                    {experiences.map((exp) => (
-                        <button
-                        key={exp.id}
-                        onClick={() => setActiveTabId(exp.id)}
-                        className={`
-                            py-2 px-10
-                            md:text-left md:py-3 md:px-4 transition-all duration-300 
-                            md:text-lg font-ntr
-                            ${activeTabId === exp.id 
-                                ? 'text-red-400 border-b-4 md:border-r-4 md:border-b-0 border-red-500'
-                                : 'text-gray-400 hover:bg-gray-700 hover:text-white md:border-r-4 border-transparent' 
-                            }
-                        `}
-                        >
-                            <span className="md:hidden flex items-center justify-center text-md font-semibold">
-                                {exp.id}
-                            </span>
+  return (
+    <div id="experience" className=" relative flex md:flex-row gap-[5vw] min-h-screen px-[3vw] justify-center items-center max-w-full bg-[#510400]">
 
-                            <span className="hidden md:inline-block">
-                                {exp.company}
-                            </span>
-                        </button>
-                    ))}
-                </div>
+        <div className="md:max-w-4xl">
 
-                <div className="md:w-3/4 px-2 overflow-y-auto [h-300px]">
-                    {experiences.map((exp) => (
-                        <div
-                        key={exp.id}
-                        className={`${activeTabId === exp.id ? 'block' : 'hidden'}`}
-                        >
-                            <h2 className="text-4xl font-semibold font-ntr">
-                                <span className="text-white">{exp.title}</span>
-                                <span className="text-red-400">{exp.company}</span>
-                            </h2>
+            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                <p className="text-3xl md:text-4xl text-[#ddc5ad] font-bold">/ experience</p>
+            </motion.div>
 
-                            <p className="text-sm italic text-gray-400 mb-6">{exp.duration}</p>
+            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                <p className="mt-4 text-sm md:text-lg text-white font-be-vietnam-pro">
+                Some work I've done in the past. Currently looking for summer 2026 internships!
+                </p>
+            </motion.div>
 
-                            <ul className="list-outside space-y-2 text-gray-300 text-lg space-y-5">
-                                {exp.responsibilities.map(function (resItem, i) {
-                                    return (
-                                        <li key={i} className="font-roboto relative before:content-['➢'] before:text-red-400 before:mr-2">{resItem}</li>
-                                    );
-                                })}
-                            </ul>
+            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+        
+                <div className="mt-8 bg-[#eee3c3] rounded-lg p-5 relative">
 
-                            <div className="mt-8">
-                                <ul className="flex flex-row flex-wrap gap-x-3 gap-y-2 list-outside text-gray text-md">
-                                    {exp.skills.map(function(skill, i) {
-                                        return (
-                                            <ElectricBorder
-                                            color="#df0001"
-                                            speed={1}
-                                            chaos={0.5}
-                                            thickness={2}
-                                            key={i}
-                                            style = {{ borderRadius: "9px" }}
-                                            >
-                                            <div>
-                                                <li key={i} className="font-roboto text-md">{skill}</li>
-                                            </div>
-                                            </ElectricBorder>
-                                        );
-                                    })}
-                                </ul>
-                            </div>
+                    <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                        <img
+                            src="/images/tape.png"
+                            alt="tape"
+                            className="absolute -top-11 -translate-x-5/6 w-24 z-10 pointer-events-none"
+                        />
+                    </motion.div>
+                
+                    <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                        <div className="flex flex-wrap gap-2 border-b border-black/15 pb-3">
+
+                            {experiences.map((exp, i) => (
+
+                            <button
+                                key={exp.company}
+                                onClick={() => setActive(i)}
+                                className={`px-3 py-1.5 text-sm font-semibold transition
+                                ${active === i ? "bg-[#A13046] text-[#F5F5F5]" : "bg-white/50 text-[#A13046] hover:bg-white"}
+                                `}
+                            >
+                                <span className="md:hidden">{i}</span>
+                                <span className="hidden md:inline">{exp.company}</span>
+                            </button>
+
+                            ))}
                         </div>
-                    ))}
+                    </motion.div>
+
+                
+                    <div className="mt-4">
+
+                        <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                            <span className="text-lg text-[#A14046] font-extrabold">
+                            {experiences[active].title}   <span className="text-lg text-[#A13046]"> {experiences[active].company} </span>
+                            </span>
+                        </motion.div>
+
+                        <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                            <p className="text-sm text-[#A13046] mb-2">{experiences[active].dates}</p>
+                        </motion.div>
+
+                        <motion.ul
+                        key={active}
+                        initial="hidden"
+                        animate="show"
+                        variants={{
+                            hidden: {},
+                            show: {
+                            transition: { staggerChildren: 0.5 }
+                            }
+                        }}
+                        className="list-image-[url(/images/heart.png)] list-inside"
+                        >
+
+                        {experiences[active].bullets.map((b, idx) => (
+                            <motion.li
+                            key={idx} 
+                            variants={{
+                                hidden: { opacity: 0, y: 20 },
+                                show: { opacity: 1, y: 0 }
+                            }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="text-sm md:text-md font-be-vietnam-pro"
+                            >
+                            {b}
+                            </motion.li>
+                        ))}
+
+                        </motion.ul>
+
+                    </div>
+
                 </div>
-            </div>
-            <p className="font-roboto text-md md:text-lg mt-3">
-                Furthermore, I am an active member of three organizations: KnightHacks, Girls Who Code, and the National Society of Black Engineers. In 
-                these clubs, I attend workshops to develop new technical and professional skills. I have participated in 3 hackathons hosted by KnighHacks and 
-                am currently a mentee in the program, strengthening my software development and teamwork abilities.
-            </p>
+            </motion.div>
+
         </div>
-    );
+
+        <div className="hidden max-w-md md:flex-shrink-0 md:flex justify-end">
+
+            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut", delay: 0.3}} viewport={{ once: true }}>
+                <img
+                    src="/images/scrappage.png"
+                    alt="scrap page"
+                    className="w-72 h-52 object-contain -rotate-12"
+                />
+            </motion.div>
+
+        </div>
+
+    </div>
+  );
 }
