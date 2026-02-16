@@ -5,6 +5,7 @@ import { NTR } from "next/font/google";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/navbar.jsx";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
