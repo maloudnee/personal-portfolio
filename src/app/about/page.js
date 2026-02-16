@@ -8,11 +8,11 @@ export default function About() {
 
             <div className="flex flex-start flex-col space-y-7 text-white max-w-screen"> 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <p className="font-robto text-3xl md:text-4xl text-[#ddc5ad] font-bold">/ about-me</p>
+                    <p className="font-robto text-3xl md:text-4xl xl:text-6xl text-[#ddc5ad] font-bold">/ about-me</p>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <p className="text-sm md:text-md font-be-vietnam-pro">
+                    <p className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
                         I am an undergraduate computer science student at the University of Central Florida who loves building.
                         I aim to build software that can make a positive impact on people's lives. I'm 
                         especially interested in computer vision and machine learning. What excites me the most about the 
@@ -22,14 +22,14 @@ export default function About() {
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <p className="text-sm md:text-md font-be-vietnam-pro">
+                    <p className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
                         Some tech skills I've picked up along the way: 
                     </p>
                 </motion.div>
 
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <div className="flex flex-row gap-7 text-xl md:text-3xl">
+                    <div className="flex flex-row gap-7 text-xl md:text-3xl xl:text-4xl">
                         <FaPython title="Python" className="text-[#DDC4AD] hover:"/>
                         <FaJava title="Java" className="text-[#DDC4AD]"/>
                         <FaSwift title="Swift" className="text-[#DDC4AD]"/>
@@ -42,7 +42,7 @@ export default function About() {
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <p className="text-sm md:text-md font-be-vietnam-pro">
+                    <p className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
                         Outside of tech, I enjoy reading, traveling, and learning new languages. Maintenat, je parle un peu français. 日本語次!
                     </p>
                 </motion.div>

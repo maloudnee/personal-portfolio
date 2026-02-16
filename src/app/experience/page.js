@@ -29,16 +29,16 @@ export default function Experience() {
   const [active, setActive] = useState(0);
 
   return (
-    <div id="experience" className=" relative flex md:flex-row gap-[5vw] min-h-screen px-[3vw] justify-center items-center max-w-full bg-[#510400]">
+    <div id="experience" className=" relative flex md:flex-row gap-[5vw] min-h-screen px-[3vw] justify-center items-center max-w-full bg-[#510400] xl:justify-start">
 
-        <div className="md:max-w-4xl">
+        <div className="md:max-w-4xl xl:max-w-6xl">
 
             <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                <p className="text-3xl md:text-4xl text-[#ddc5ad] font-bold">/ experience</p>
+                <p className="text-3xl md:text-4xl xl:text-6xl text-[#ddc5ad] font-bold">/ experience</p>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                <p className="mt-4 text-sm md:text-lg text-white font-be-vietnam-pro">
+                <p className="mt-4 text-sm md:text-lg xl:text-lg text-white font-be-vietnam-pro">
                 Some work I've done in the past. Currently looking for summer 2026 internships!
                 </p>
             </motion.div>
@@ -130,7 +130,7 @@ export default function Experience() {
                 <img
                     src="/images/scrappage.png"
                     alt="scrap page"
-                    className="w-72 h-52 object-contain -rotate-12"
+                    className="w-72 h-52 xl:w-128 xl:h-100 object-contain -rotate-12"
                 />
             </motion.div>
 

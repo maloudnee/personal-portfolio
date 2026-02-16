@@ -184,16 +184,16 @@ export default function Projects() {
 
     return (
        <>
-        <div className="relative flex flex-col gap-[5vw] min-h-screen px-3 md:px-[5vw] w-full bg-[#510400]">
+        <div className="relative flex flex-col gap-[5vw] min-h-screens md:px-[5vw] w-full bg-[#510400]">
 
             <div className="font-be-vietnam-pro text-white max-w-4xl">
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <p className="font-robto text-2xl md:text-4xl text-[#ddc5ad] font-bold pt-2">/ projects</p>
+                    <p className="font-robto text-2xl md:text-4xl xl:text-6xl text-[#ddc5ad] font-bold pt-2">/ projects</p>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <p className="mt-4 text-sm md:text-lg text-white font-be-vietnam-pro">Projects I've done. </p>
+                    <p className="mt-4 text-sm md:text-lg xl:text-lg text-white font-be-vietnam-pro">Projects I've done. </p>
                 </motion.div>
 
             </div>

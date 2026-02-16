@@ -8,7 +8,7 @@ export default function Home() {
             
             <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
                 <div className="flex justify-center flexshrink-0 ">
-                    <img src="/images/moi.jpg" alt="me" className="w-36 h-36 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-[50%] shadow-2xl object-cover shadow-[0_0_50px_10px_rgba(255,255,255,0.35)]"/>
+                    <img src="/images/moi.JPG" alt="me" className="w-36 h-36 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-[50%] shadow-2xl object-cover shadow-[0_0_50px_10px_rgba(255,255,255,0.35)]"/>
                 </div>
             </motion.div>
 
