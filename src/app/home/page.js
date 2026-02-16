@@ -1,3 +1,4 @@
+"use client";
 import Typist from 'react-typist-component';
 import { motion } from 'framer-motion';
 

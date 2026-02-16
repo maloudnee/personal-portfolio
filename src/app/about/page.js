@@ -1,3 +1,4 @@
+"use client";
 import { FaPython, FaJava, FaSwift, FaJs, FaHtml5, FaCss3, FaPhp, FaDatabase } from "react-icons/fa";
 import { motion } from "framer-motion";
 
