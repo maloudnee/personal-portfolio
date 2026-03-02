@@ -30,8 +30,9 @@ export default function Home() {
                 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
                     <p className="text-md font-be-vietnam-pro">  
-                        & i’m a computer science student with a fascination for tech. I believe technology has the power to change the world 
-                        for the better when used ethically, and I want to be a part of that change.
+                        & i’m a computer science student building machine learning-driven applications and full-stack systems. 
+                        I love building and believe technology has the power to change the world 
+                        for the better when used ethically. I want to be a part of that change.
                     </p>
                 </motion.div>
 

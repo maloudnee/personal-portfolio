@@ -13,21 +13,23 @@ export default function Projects() {
             subtitle: "Jan 2026 -- Present ",
             shortDesc: "End-to-end machine learning system for personalized makeup and skincare recommendations using computer vision and RAG.",
             longerDesc: `
-            An ongoing project where I am building a full machine learning pipeline that combines computer vision, recommender systems, and retrieval
-            augmented generation (RAG) to provide personalized makeup and skincare recommendations.
+            Building an end-to-end machine learning system that combines computer vision, content-based filtering, and retrieval-augmented generation 
+            (RAG) to provide personalized makeup and skincare recommendations.
             
-            I am designing and implementing a content-based filtering engine using product embeddings and cosine similarity across 8,000+ products
-            to generate tailored recommendations based on real users reviews. To personalize recommendations further, I am developing a skin tone
-            detection model using computer vision techniques, allowing the system to suggest products that complement the user's complexion.
-            
-            Through this project I am gaining hands-on experience in building end-to-end machine learning systems, from data preprocessing and 
-            model development to deployment and user interaction. I get to apply and deepen my understanding of machine learning concepts, as well as makeup.`,
+            Implementing a content-based filtering approach using embeddings and cosine similarity across 8,000+ producs 
+            to recommend products based on user preferences and visual features.
+
+            Developing a skin tone detection pipeline using computer vision techniques, including MTCNN for face detection and Lab Color Analysis 
+            for accurate skin tone classification, to enhance recommendation relevance.
+
+            The system integrates CV outputs with a recommendation engine and RAG architecture to generate personalized product suggestions, 
+            providing users with tailored beauty advice.`,
             highlights: [
                 "Content-based filtering with embeddings and cosine similarity.",
                 "Skin tone detection (going in the direction of using MTCNN and Lab Color Analysis).",
                 "Integrated CV & recommendation system & RAG architecture"
             ],
-            tech: ["Python", "PyTorch", "LangChain", "Scikit-learn", "NumPy"],
+            tech: ["Python", "OpenCV", "LangChain", "Scikit-learn", "NumPy"],
             links: {
             }        
         },

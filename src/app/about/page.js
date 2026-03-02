@@ -13,32 +13,41 @@ export default function About() {
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
                     <p className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
-                        I am an undergraduate computer science student at the University of Central Florida who loves building.
-                        I aim to build software that can make a positive impact on people's lives. I'm 
-                        especially interested in computer vision and machine learning. What excites me the most about the 
-                        field of computer science is the constant opportunity to learn and grow, as well as the ability to create 
-                        innovative solutions to complex problems. 
+                    I am an undergraduate computer science student at the University of Central Florida focused on  machine learning. 
+                    I’m drawn to problems where intelligence and user experience intersect– how machine learning systems directly define how people 
+                    interact with software. Through my projects, I explore how to design systems that are technically robust and intuitive for real 
+                    users. 
                     </p>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
                     <p className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
-                        Some tech skills I've picked up along the way: 
+                        What I've been working with recently:
                     </p>
                 </motion.div>
 
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <div className="flex flex-row gap-7 text-xl md:text-3xl xl:text-4xl">
-                        <FaPython title="Python" className="text-[#DDC4AD] hover:"/>
-                        <FaJava title="Java" className="text-[#DDC4AD]"/>
-                        <FaSwift title="Swift" className="text-[#DDC4AD]"/>
-                        <FaJs title="JavaScript" className="text-[#DDC4AD]"/>
-                        <FaHtml5 title="HTML" className="text-[#DDC4AD]"/>
-                        <FaCss3 title="CSS" className="text-[#DDC4AD]"/>
-                        <FaPhp title="PHP" className="text-[#DDC4AD]"/>
-                        <FaDatabase title="MySQL" className="text-[#DDC4AD]"/>
-                    </div>
+                    <ul className="grid grid-cols-2 gap-3 list-image-[url('/images/star.png')] list-inside">
+                        <li className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
+                            LangChain
+                        </li>
+                        <li className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
+                            PyTorch
+                        </li>
+                        <li className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
+                            OpenCV
+                        </li>
+                        <li className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
+                            Next.js
+                        </li>
+                        <li className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
+                            SwiftUI
+                        </li>
+                        <li className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
+                            FAST API
+                        </li>
+                    </ul>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
