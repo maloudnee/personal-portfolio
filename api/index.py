@@ -105,7 +105,10 @@ instruction = f"""
 # API endpoint to generate MalBot prompt
 sessions = {} # sessions to keep track of chat's memory
 
+app = FastAPI(redirect_slashes=False)
+
 @app.post("/api/chat")
+@app.post("/api/chat/") # this is to handle both /api/chat and /api/chat/ since some clients might add a trailing slash
 async def chat_with_malbot(user_input: str = Body(..., embed=True), session_id: str = Body(..., embed=True)):
     try:
         # Create a new session if it doesn't exist
