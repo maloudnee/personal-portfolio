@@ -186,7 +186,7 @@ export default function Projects() {
 
     return (
        <>
-        <div className="relative flex flex-col gap-[5vw] min-h-screens px-3 md:px-[5vw] w-full bg-[#510400]">
+        <div id="projects" className="relative flex flex-col gap-[5vw] min-h-screens px-3 md:px-[5vw] w-full bg-[#510400]">
 
             <div className="font-be-vietnam-pro text-white max-w-4xl">
 
