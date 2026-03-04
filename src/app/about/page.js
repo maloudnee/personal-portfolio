@@ -28,7 +28,7 @@ export default function About() {
 
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <ul className="grid grid-cols-2 gap-3 list-image-[url('/images/star.png')] list-inside">
+                    <ul className="grid grid-cols-2 gap-3 list-image-[url('/images/arrow.png')] list-inside">
                         <li className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
                             LangChain
                         </li>
@@ -39,7 +39,7 @@ export default function About() {
                             OpenCV
                         </li>
                         <li className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
-                            Next.js
+                            TensorFlow
                         </li>
                         <li className="text-sm md:text-md xl:text-lg font-be-vietnam-pro">
                             SwiftUI
