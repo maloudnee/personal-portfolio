@@ -14,7 +14,8 @@ app = FastAPI()
 # Set up CORS middleware to allow requests from the frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Allow all origins for simplicity, adjust as needed
+    allow_origins=["https://marcier.dev/", "https://marcier.dev.vercel.app"],  # Allow all origins for simplicity, adjust as needed
+    allow_origins_regex=r"https://.*\.vercel\.app",  
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
     allow_headers=["*"]  # Allow all headers
@@ -104,7 +105,7 @@ instruction = f"""
 # API endpoint to generate MalBot prompt
 sessions = {} # sessions to keep track of chat's memory
 
-@app.post("/chat")
+@app.post("/api/chat")
 async def chat_with_malbot(user_input: str = Body(..., embed=True), session_id: str = Body(..., embed=True)):
     try:
         # Create a new session if it doesn't exist
