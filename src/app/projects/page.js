@@ -9,47 +9,70 @@ export default function Projects() {
     const my_projects = [
 
         {
-            title: "Look Journal",
-            subtitle: "Jan 2026 -- Present ",
-            shortDesc: "End-to-end machine learning system for personalized makeup and skincare recommendations using computer vision and RAG.",
+            title: "Cybersecurity Tools That Cry Wolf",
+            subtitle: "Feb 2026 -- Present",
+            shortDesc: "Security analysis app using a Naive Bayes classifier to automatically categorize CVE entries into system layers using NLP.",
             longerDesc: `
-            Building an end-to-end machine learning system that combines computer vision, content-based filtering, and retrieval-augmented generation 
-            (RAG) to provide personalized makeup and skincare recommendations.
-            
-            Implementing a content-based filtering approach using embeddings and cosine similarity across 8,000+ producs 
-            to recommend products based on user preferences and visual features.
+            Leading AI/ML development for a 5-person team building a security analysis application that automatically categorizes CVE entries from the National Vulnerability Database.
 
-            Developing a skin tone detection pipeline using computer vision techniques, including MTCNN for face detection and Lab Color Analysis 
-            for accurate skin tone classification, to enhance recommendation relevance.
+            Implementing a Naive Bayes classifier to categorize 10,000+ CVE entries into 5 system layers (OS, Firmware, Hardware, Applications, Library) based on vulnerability description text.
 
-            The system integrates CV outputs with a recommendation engine and RAG architecture to generate personalized product suggestions, 
-            providing users with tailored beauty advice.`,
+            Designing an NLP preprocessing pipeline with tokenization, stop-word removal, and TF-IDF vectorization to extract features from high-dimensional text data for classification.
+
+            Architecting the application layer security module in Java, integrating ML classification results with vulnerability scanning and remediation workflows for automated threat assessment.
+
+            Designing a cross-platform application inventory system gathering software version information from Linux package managers, macOS applications folder, and Windows registry to enable automated vulnerability detection.`,
             highlights: [
-                "Content-based filtering with embeddings and cosine similarity.",
-                "Skin tone detection (going in the direction of using MTCNN and Lab Color Analysis).",
-                "Integrated CV & recommendation system & RAG architecture"
+                "Naive Bayes classifier categorizing CVEs into 5 system layers.",
+                "NLP pipeline with TF-IDF vectorization on 10,000+ CVE entries.",
+                "Cross-platform inventory system across Linux, macOS, and Windows.",
+                "Lead ML developer on a 5-person team."
             ],
-            tech: ["Python", "OpenCV", "LangChain", "Scikit-learn", "NumPy"],
+            tech: ["Java", "Python", "Scikit-learn", "React", "Git"],
             links: {
-            }        
+            }
+        },
+
+        {
+            title: "Look Journal",
+            subtitle: "Jan 2026 -- Present",
+            shortDesc: "Beauty tech app solving the foundation matching problem for diverse skin tones using computer vision and a personalized recommendation algorithm.",
+            longerDesc: `
+            Developing a beauty tech application solving the foundation matching problem for diverse skin tones, addressing the beauty market's historical exclusivity gap with a computer vision solution.
+
+            Trained a neural network on an ethnically diverse dataset using transfer learning to achieve 70% accuracy across 35 variations of skin tones.
+
+            Implementing a recommendation algorithm matching users to products from 50+ Fenty shades with confidence scoring, reducing returns and customer dissatisfaction through transparent uncertainty quantification.
+
+            Designing a responsive web interface enabling users to upload photos and receive instant personalized recommendations, featuring saved shade history and shade adjustment for seasonal variation.`,
+            highlights: [
+                "Neural network with transfer learning achieving 70% accuracy across 35 skin tone variations.",
+                "Recommendation algorithm across 50+ Fenty shades with confidence scoring.",
+                "Responsive web interface with shade history and seasonal adjustment."
+            ],
+            tech: ["Python", "PyTorch", "LangChain", "React", "PostgreSQL", "AWS"],
+            links: {
+            }
         },
 
         {
             title: "Tear of Fate",
-            subtitle: "KnighHacks 2025",
-            shortDesc: "Emotion-driven 2D game where users attack moves are based on the facial expressions they display.",
+            subtitle: "KnightHacks 2025",
+            shortDesc: "Browser-based 2D game with real-time emotion detection that adapts gameplay based on the player's facial expressions.",
             longerDesc: `
-            Tear of Fate is a 2D game that transforms users expressions into gameplay built in 36 hours at a hackathon. 
-            We utilized Face API to read user's expressions, then translated those expressions to gameplay actions, such as triggering attacks.
-            We also integrated Google ADK, taking an agent to agent approach, using AI as the enemy characters. This was done to make the enemies attack smarter.
-            I implemented Google ADK and WebSocket systems, allowing them to learn and coordinate across levels.
-            Although time constraints prevented full integration, this project deepened my understanding of real-time communication and AI agent design`,
+            Led a 4-person hackathon team developing a browser-based game with real-time emotion detection using Face-API.js, adapting gameplay based on player facial expressions.
+
+            Integrated Google Agent Development Kit, creating 3 autonomous AI agents with unique decision-making logic for intelligent enemy behavior and dynamic difficulty scaling.
+
+            Managed project scope delivering a working emotion detection prototype in 36 hours, demonstrating adaptability by pivoting from an ambitious multi-agent system to MVP under time constraints.
+
+            Implemented an emotion-to-gameplay mapping system translating facial expression confidence scores into game mechanics, pioneering an affective computing approach to player experience.`,
             highlights: [
-                "Emotion Detection with Face API (Tensorflow.js)",
-                "Phaser.js for combat, animation, and state transitions.",
-                "Team of 4 focused on emotional AI and design."
+                "Real-time emotion detection with Face-API.js driving gameplay mechanics.",
+                "3 autonomous AI agents via Google ADK for dynamic enemy behavior.",
+                "Delivered working prototype in 36 hours as team lead."
             ],
-            tech: ["Python", "Phaser.js", "Face API", "Tensorflow.js", "Javascript", "HTML", "CSS", "Google ADK", "Websockets"],
+            tech: ["JavaScript", "TensorFlow.js", "Phaser.js", "WebSockets", "Python", "Google ADK"],
             links: {
                 github: "https://github.com/maloudnee/kh-hackathon",
                 devpost: "https://devpost.com/software/tear-of-fate"

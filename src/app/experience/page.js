@@ -9,9 +9,9 @@ export default function Experience() {
       title: "Undergraduate Research Assistant @",
       dates: "Oct 2025 - Feb 2026",
       bullets: [
-        "Processed and structured 1,000+ data samples for training and evaluating generative AI models focused on assistive technologies.",
-        "Built Python data pipelines to automate preprocessing and feature extraction, reducing manual data handling and iteration time.",
-        "Collaborated with lab peers to refine AI training sets, specifically targeting the improvement of real-world accessibility for users with speech impairments.",
+        "Cleaned and structured 1,000+ data samples of dysarthria speech patterns to train a generative AI model capable of analyzing a user's speech errors and returning personalized pronunciation guidance and exercises.",
+        "Built a Python data pipeline using Librosa and Montreal Forced Aligner (MFA) to process TORGO dataset recordings across control and dysarthric speakers, extracting phoneme-level alignments to identify speech errors such as dropped consonants and phonemes.",
+        "Collaborated with a peer researcher to cross-validate findings by combining phoneme-level pronunciation analysis with word-level transcription comparison.",
       ],
     },
     {
