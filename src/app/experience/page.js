@@ -5,8 +5,18 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const experiences = [
     {
+        company: "University of Central Florida",
+        title: "Researcher",
+        dates: "June 2026 - Present",
+        bullets: [
+            "Collaborating with clinical researchers to perform precise annotations on ultrasound scans, curating 'ground truth' datasets to train computer vision models on pancreatic masses.",
+            "Managing dataset onboarding and quality control, ensuring medical image files and clinical data meet structural requirements for machine learning training pipelines.",
+            "Preparing for upcoming phases of multi-modal research focused on parsing and aligning clinical text reports alongside corresponding ultrasound imaging datasets."
+        ],
+    },
+    {
       company: "University of Central Florida",
-      title: "Undergraduate Research Assistant @",
+      title: "Undergraduate Research Assistant",
       dates: "Oct 2025 - Feb 2026",
       bullets: [
         "Cleaned and structured 1,000+ data samples of dysarthria speech patterns to train a generative AI model capable of analyzing a user's speech errors and returning personalized pronunciation guidance and exercises.",
@@ -16,7 +26,7 @@ export default function Experience() {
     },
     {
       company: "Synthetic Reality Lab",
-      title: "Technical Writer @",
+      title: "Technical Writer",
       dates: "Sept 2023 - Nov 2023",
       bullets: [
         "Edited technical manuscripts for grammar, clarity, and adherence to publication standards.",
@@ -26,116 +36,86 @@ export default function Experience() {
     },
   ];
 
-  const [active, setActive] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div id="experience" className=" relative flex md:flex-row gap-[5vw] min-h-screen px-[3vw] justify-center items-center max-w-full bg-[#510400] xl:justify-start">
+        <section 
+            id="experience" 
+            className="box-border flex flex-col min-h-screen w-full px-6 md:px-[8vw] bg-[#120F0D] py-24 overflow-hidden justify-center"
+        >
+            <div className="w-full max-w-4xl"> 
 
-        <div className="md:max-w-4xl xl:max-w-6xl">
+                <motion.div 
+                    initial={{ opacity: 0, y: 50}} 
+                    whileInView={{ opacity: 1, y: 0}} 
+                    transition={{ duration: 0.9, ease: "easeOut"}} 
+                    viewport={{ once: true }}
+                    className="flex flex-row items-center gap-3"
+                >
+                    <img src="/images/tickets.png" alt="tickets" className="w-10 h-10 object-contain pointer-events-none"/>
+                    <h2 className="font-expanded text-3xl md:text-4xl lg:text-5xl text-white font-bold tracking-wider uppercase leading-none">
+                        EXPERIENCE
+                    </h2>
+                </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                <p className="text-3xl md:text-4xl xl:text-6xl text-[#ddc5ad] font-bold">/ experience</p>
-            </motion.div>
+                <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
+                    <p className="mt-6 text-sm md:text-base text-white font-be-vietnam-pro">
+                        Research I've done.
+                    </p>
+                </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                <p className="mt-4 text-sm md:text-lg xl:text-lg text-white font-be-vietnam-pro">
-                Some work I've done in the past. Currently looking for summer 2026 internships!
-                </p>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-        
-                <div className="mt-8 bg-[#eee3c3] rounded-lg p-5 relative">
-
-                    <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                        <img
-                            src="/images/tape.png"
-                            alt="tape"
-                            className="absolute -top-11 -translate-x-5/6 w-24 z-10 pointer-events-none"
-                        />
-                    </motion.div>
-                
-                    <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                        <div className="flex flex-wrap gap-2 border-b border-black/15 pb-3">
-
-                            {experiences.map((exp, i) => (
-
+                <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start mt-12 w-full">
+                        
+                    <div className="relative flex flex-col border-l border-neutral-800 w-full md:w-48 flex-shrink-0">
+                        {experiences.map((job, idx) => (
                             <button
-                                key={exp.company}
-                                onClick={() => setActive(i)}
-                                className={`px-3 py-1.5 text-sm font-semibold transition
-                                ${active === i ? "bg-[#A13046] text-[#F5F5F5]" : "bg-white/50 text-[#A13046] hover:bg-white"}
-                                `}
+                                key={idx}
+                                onClick={() => setActiveTab(idx)}
+                                className={`py-3 px-4 text-left text-xs font-mono tracking-wider transition-all duration-200 block w-full
+                                    ${activeTab === idx ? 'text-[#795C34] bg-neutral-900/30 font-bold' : 'text-neutral-500 hover:text-neutral-300 hover:bg-neutral-900/10'}`}
                             >
-                                <span className="md:hidden">{i}</span>
-                                <span className="hidden md:inline">{exp.company}</span>
+                                {job.company}
                             </button>
-
-                            ))}
-                        </div>
-                    </motion.div>
-
-                
-                    <div className="mt-4">
-
-                        <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                            <span className="text-lg text-[#A14046] font-extrabold">
-                            {experiences[active].title}   <span className="text-lg text-[#A13046]"> {experiences[active].company} </span>
-                            </span>
-                        </motion.div>
-
-                        <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                            <p className="text-sm text-[#A13046] mb-2">{experiences[active].dates}</p>
-                        </motion.div>
-
-                        <motion.ul
-                        key={active}
-                        initial="hidden"
-                        animate="show"
-                        variants={{
-                            hidden: {},
-                            show: {
-                            transition: { staggerChildren: 0.5 }
-                            }
-                        }}
-                        className="list-image-[url(/images/heart.png)] list-inside"
-                        >
-
-                        {experiences[active].bullets.map((b, idx) => (
-                            <motion.li
-                            key={idx} 
-                            variants={{
-                                hidden: { opacity: 0, y: 20 },
-                                show: { opacity: 1, y: 0 }
-                            }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
-                            className="text-sm md:text-md font-be-vietnam-pro"
-                            >
-                            {b}
-                            </motion.li>
                         ))}
 
-                        </motion.ul>
+                        <motion.div 
+                            className="hidden md:block absolute left-0 w-[2px] h-[44px]"
+                            style={{ backgroundColor: '#795C34' }}
+                            animate={{ y: activeTab * 44 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        />
+                    </div>
 
+                    <div className="flex-grow min-h-[320px] w-full">
+                        <motion.div
+                            key={activeTab}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4 }}
+                        >
+                            <h3 className="text-xl md:text-2xl font-bold font-expanded text-white tracking-wide">
+                                {experiences[activeTab].title}{" "}
+                                <span className="text-[#795C34]">@ {experiences[activeTab].company}</span>
+                            </h3>
+                            
+                            <p className="text-xs font-mono text-neutral-500 mt-2 tracking-widest uppercase">
+                                {experiences[activeTab].dates}
+                            </p>
+
+                            <ul className="mt-6 space-y-4 max-w-2xl">
+                                {experiences[activeTab].bullets.map((bullet, i) => (
+                                    <li key={i} className="flex items-start text-sm md:text-base font-be-vietnam-pro text-neutral-300 leading-relaxed gap-3">
+                                        <span className="text-[#795C34] font-mono text-xs select-none pt-1">▷</span>
+                                        <span>{bullet}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
                     </div>
 
                 </div>
-            </motion.div>
 
-        </div>
-
-        <div className="hidden max-w-md md:flex-shrink-0 md:flex justify-end">
-
-            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut", delay: 0.3}} viewport={{ once: true }}>
-                <img
-                    src="/images/scrappage.png"
-                    alt="scrap page"
-                    className="w-72 h-52 xl:w-128 xl:h-100 object-contain -rotate-12"
-                />
-            </motion.div>
-
-        </div>
-
-    </div>
+            </div>
+        </section>
   );
 }

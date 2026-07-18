@@ -11,6 +11,8 @@
   --font-dynapuff: var(--font-dynapuff), sans-serif;
   --font-ntr: var(--font-ntr);
   --font-roboto: var(--font-roboto);
+  --font-expanded: var(--font-nunito-sans-expanded);
+  --font-nunito-sans: var(--font-nunito-sans);
   --font-zalando-sans: var(--font-zalando-sans);
   --font-be-vietnam-pro: var(--font-be-vietnam-pro);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -121,7 +123,33 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-black text-foreground;
+  html, body {
+    background-color: #120F0D !important;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
   }
+}
+
+@keyframes drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1920px 0;
+  }
+}
+
+.animate-film {
+  animation: drift 90s linear infinite;
+}
+
+.navbar, 
+.navbar-collapse, 
+.container,
+.container-fluid {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }

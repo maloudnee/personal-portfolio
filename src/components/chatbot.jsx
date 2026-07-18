@@ -43,8 +43,8 @@ export default function ChatBot() {
     return (
         <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
             {isOpen &&  (
-                <div className="w-80 h-96 bg-[#eee3c3] shadow-2xl rounded-lg mb-4 border border-black-200 overflow-hidden flex flex-col">
-                    <div className="text-[#510400] font-bold text-lg p-4">
+                <div className="w-80 h-96 bg-[#120F0D] shadow-2xl rounded-lg mb-4 border border-black-200 overflow-hidden flex flex-col">
+                    <div className="text-white font-bold text-lg p-4">
                         MalBot Chat
                     </div>
 
@@ -53,8 +53,8 @@ export default function ChatBot() {
                             <div key={index} className={`flex ${msg.role === "bot" ? "justify-start" : "justify-end"}`}>
                                 <div className={`max-w-[80%] p-2 rounded-lg text-sm ${
                                     msg.role === "bot" 
-                                    ? "bg-[#510400] text-white rounded-bl-none" 
-                                    : "bg-[#313131] text-white rounded-br-none"}`}>
+                                    ? "bg-gray-700 text-white rounded-bl-none" 
+                                    : "bg-gray-500 text-white rounded-br-none"}`}>
                                     {msg.content}
                                 </div>
                             </div>
@@ -63,27 +63,27 @@ export default function ChatBot() {
 
                     <div className="flex justify-start p-2">
                         {isLoading && (
-                            <div className="text-sm text-black-500 animate-pulse">
+                            <div className="text-sm text-white-500 animate-pulse">
                                 MalBot is typing...
                             </div>
                         )}
                     </div>
 
-                    <div className="p-4 border-t border-black-300">
+                    <div className="p-4 border-t text-white border-white-300">
                         <input 
                             type="text" 
                             value={input} 
                             onChange={(e) => setInput(e.target.value)} 
                             onKeyDown={(e) => e.key === "Enter" && sendMessage()} 
                             placeholder="Type your message..." 
-                            className="w-full p-2 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#510400]"
+                            className="w-full p-2 border border-white-300 rounded focus:outline-none focus:ring-2 focus:ring-[#510400]"
                         />
                     </div>
                 </div>
             )}
             <button 
                 onClick={() => setIsOpen(!isOpen)} 
-                className="text-white p-3 rounded-xl shadow-lg hover:bg-[#A13046] transition-colors"
+                className="text-white p-3 rounded-xl shadow-lg hover:bg-[#120F0D] transition-colors"
             >
                 {isOpen ? (
                     <span className="text-xl font-bold">X</span>

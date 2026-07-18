@@ -1,42 +1,34 @@
 "use client";
-import Typist from 'react-typist-component';
-import { motion } from 'framer-motion';
 
 export default function Home() {
     return(
-        <div id="home" className="box-border flex flex-col md:flex-row gap-[5vw] min-h-screen max-w-screen px-[5vw] justify-center items-center w-full bg-[#510400]">
-            
-            <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                <div className="flex justify-center flexshrink-0 ">
-                    <img src="/images/moi.JPG" alt="me" className="w-36 h-36 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-[50%] shadow-2xl object-cover shadow-[0_0_50px_10px_rgba(255,255,255,0.35)]"/>
-                </div>
-            </motion.div>
 
-            <div className="text-white max-w-2xl space-y-7">
+        <div id="home" className="relative w-full h-screen overflow-hidden bg-[#120F0D] flex flex-col justify-center items-center px-4">
 
-                <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                        <Typist avgTypingDelay={127} cursor={<span className="font-roboto font-bold animate-pulse [animation-duration:0.9s]">|</span>}>
-                            <Typist.Delay ms={100} />
-                            < span className="text-4xl font-roboto"> hey, i'm 
-                                <span className="text-4xl font-roboto text-[#ddc5ad] font-bold"> MALOUDNEE MARCIER </span>
-                                .
-                            </span>
-                        </Typist>
-                </motion.div>
-                    
-                <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <p className="text-base font-be-vietnam-pro italic"> / Ma • lood • knee  Mar • si • air / </p>
-                </motion.div>
-                
-                <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
-                    <p className="text-md font-be-vietnam-pro">  
-                        & i’m a computer science student building machine learning-driven applications and full-stack systems. 
-                        I love building and believe technology has the power to change the world 
-                        for the better when used ethically. I want to be a part of that change.
-                    </p>
-                </motion.div>
+            <div
+                className="absolute inset-0 w-full h-full opacity-40 bg-repeat-x bg-contain pointer-events-none
+                bg-[url('/images/home-background.png')]
+                bg-center
+                bg-cover bg-no-repeat
+                xl:bg-contain xl:bg-repeat-x
+                animate-film"
+            />
 
+            <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
+                <h1 className="font-expanded text-3xl md:text-4xl lg:text-6xl text-white text-center uppercase tracking-wider">
+                    Maloudnee Marcier
+                </h1>
+
+                <p className="font-nunito-sans text-sm md:text-base lg:text-lg text-white text-center whitespace-pre">
+                    / ma • loud • knee    mar • see • air /
+                </p>
+
+                <p className="font-be-vietnam-pro text-xs md:text-sm lg:text-base text-white text-center mt-4">
+                    CS undergrad & researcher. Currently using computer vision techniques to train ML models in the medical field 
+                    and making my own little fun projects on the side.  
+                </p> 
             </div>
+                
         </div>
-    )
+    );
 }
