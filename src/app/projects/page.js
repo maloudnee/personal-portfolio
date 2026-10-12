@@ -8,26 +8,66 @@ export default function Projects() {
    
     const my_projects = [
         {
+            title: "SteadyForum",
+            subtitle: "Knight Hacks IX — Oct 2026",
+            shortDesc: "AI-powered fitness app that scores lifting form through on-device pose estimation and gives coaching during rest periods.",
+            longerDesc: `
+            SteadyForum won 2nd Place for Best Use of Databricks at Knight Hacks IX.
+
+            The app scores lifting form through on-device pose estimation and generates personalized coaching notes during rest periods.
+            I built Databricks Medallion lakehouse pipelines that turn raw workout telemetry (Bronze) into validated per-rep metrics (Silver) and aggregate progress summaries (Gold), used for user progress tracking and model development.
+            I also integrated Hugging Face Endpoints and Hub workflows to serve and version the language models that generate the rest-interval coaching notes.`,
+            highlights: [
+                "2nd Place, Best Use of Databricks at Knight Hacks IX.",
+                "Medallion lakehouse pipelines (Bronze → Silver → Gold) for workout telemetry.",
+                "Served and versioned coaching LLMs with Hugging Face Endpoints and Hub."
+            ],
+            tech: ["TypeScript", "Python", "Databricks", "Hugging Face", "Git"],
+            links: {
+                github: "https://github.com/Del0m/KnightHacks2026",
+                devpost: "https://devpost.com/software/steadyflow-a-form-correction-gym-journey-social-media"
+            },
+            image: "/images/steady.png"
+        },
+        {
             title: "Cybersecurity Tools That Cry Wolf",
             subtitle: "Feb 2026 -- Present",
-            shortDesc: "Security analysis app using a Naive Bayes classifier to automatically categorize CVE entries into system layers using NLP.",
+            shortDesc: "Self-evolving RAG pipeline using local llama3.1 to categorize 40,000+ CVE entries into system layers with 90%+ accuracy.",
             longerDesc: `
-            I am leading AI/ML development for a 5-person team building a security analysis application that automatically categorizes CVE entries from the National Vulnerability Database.
-            For this approach, I implemented a Naive Bayes classifier to categorize 10,000+ CVE entries into 5 system layers (OS, Firmware, Hardware, Applications, Library) based on vulnerability description text.
-            I am also designing an NLP preprocessing pipeline with tokenization, stop-word removal, and TF-IDF vectorization to extract features from high-dimensional text data for classification.
-            The backend layer integrates ML classification results with vulnerability scanning and remediation workflows for automated threat assessment.
-            We're also building a cross-platform application inventory system gathering software version information from Linux package managers, macOS applications folder, and Windows registry to enable automated vulnerability detection.`,
+            A security analysis application that automatically categorizes CVE entries from the National Vulnerability Database by the system layer they affect.
+            I engineered a self-evolving RAG pipeline leveraging a local llama3.1 model via Ollama with 3-hop reasoning to categorize 40,000+ CVE entries across 5 system layers, achieving over 90% classification accuracy.
+            I also built an automated evaluation pipeline that queries and updates the database with affected layers, integrating a self-learning loop from misclassifications.
+            Alongside that, I designed a macOS application inventory system that parses application bundle metadata and system receipts to detect vulnerabilities, with a human-in-the-loop (HITL) review workflow for low-confidence model predictions.`,
             highlights: [
-                "Naive Bayes classifier categorizing CVEs into 5 system layers.",
-                "NLP pipeline with TF-IDF vectorization on 10,000+ CVE entries.",
-                "Cross-platform inventory system across Linux, macOS, and Windows.",
-                "Lead ML developer on a 5-person team."
+                "RAG pipeline with local llama3.1 and 3-hop reasoning across 40,000+ CVEs.",
+                "Over 90% classification accuracy across 5 system layers.",
+                "Self-learning evaluation loop that improves from misclassifications.",
+                "macOS app inventory with human-in-the-loop review for low-confidence predictions."
             ],
-            tech: ["Java", "Python", "Scikit-learn", "React", "Git"],
+            tech: ["Java", "Python", "LangChain", "Ollama", "Git"],
             links: {
                 github: "https://github.com/GageYacano/SecurityToolsThatCriedWolf"
             },
             image: "/images/wolf.png"
+        },
+        {
+            title: "Bingehub",
+            subtitle: "July 2026 -- Present",
+            shortDesc: "Full-stack web app tracking community sentiment and media preferences with transfer learning models deployed on AWS.",
+            longerDesc: `
+            Bingehub is a full-stack web application that tracks community sentiment and media preferences using transfer learning models deployed on AWS.
+            I trained neural network models on diverse datasets, reaching 70% prediction accuracy across complex classification tasks.
+            I also implemented custom recommendation algorithms with confidence scoring to deliver personalized media recommendations alongside transparent uncertainty quantification.`,
+            highlights: [
+                "Transfer learning models deployed on AWS.",
+                "70% prediction accuracy across complex classification tasks.",
+                "Recommendations with confidence scoring and uncertainty quantification."
+            ],
+            tech: ["Python", "PyTorch", "React", "PostgreSQL", "AWS"],
+            links: {
+
+            },
+            image: "/images/bingehub.png"
         },
         {
             title: "KnightDate",
@@ -232,7 +272,7 @@ export default function Projects() {
                         <motion.li 
                         key={key} 
                         className={`rounded-xl p-5 relative cursor-pointer shadow-2xl transition-all duration-300 min-h-[300px] flex flex-col justify-between group overflow-hidden ${
-                            hasVisualBg ? "bg-black" : "bg-[#120F0D]/80 hover:bg-white"
+                            hasVisualBg ? "bg-black" : "bg-[#ddc5ad] hover:bg-white"
                         }`}
                         onClick={() => setActive(project)}
                         variants={{

@@ -20,7 +20,7 @@ export default function Home() {
                 </h1>
 
                 <p className="font-nunito-sans text-sm md:text-base lg:text-lg text-white text-center whitespace-pre">
-                    / ma • loud • knee    mar • see • air /
+                    / ma • lood • knee    mar • see • air /
                 </p>
 
                 <p className="font-be-vietnam-pro text-xs md:text-sm lg:text-base text-white text-center mt-4">

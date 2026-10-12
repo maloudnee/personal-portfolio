@@ -24,20 +24,22 @@ export default function About() {
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
                     <p className="text-sm md:text-base lg:text-lg font-be-vietnam-pro leading-relaxed text-neutral-200">
-                        I am currently an undergraduate student at the University of Central Florida, where I do research. 
-                        I help use computer vision to structure and annotate video datasets for medical machine learning models. 
+                        I am an undergraduate student at the University of Central Florida and will graduate in December 2026. 
+                        Throughout my academic journey, I have developed a keen interest in machine learning. I have been actively 
+                        involved in research projects that leverage computer vision techniques to train machine learning models and 
+                        develop models to perform specific tasks.
                     </p>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
                     <p className="text-sm md:text-base lg:text-lg font-be-vietnam-pro text-neutral-300">
-                        Lately, some tools I've been working with are:
+                        Lately, I've been working with:
                     </p>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
                     <ul className="grid grid-cols-3 gap-4">
-                        {[ "Python", "OpenCV", "React.js" ].map((tool, idx) => (
+                        {[ "PyTorch", "OpenCV", "RAG" ].map((tool, idx) => (
                             <li key={idx} className="flex items-center gap-3 text-sm md:text-base lg:text-lg font-be-vietnam-pro text-neutral-200">
                                 <img src="/images/popcorn.png" alt="popcorn" className="w-5 h-5 object-contain pointer-events-none" />
                                 {tool}
@@ -48,7 +50,7 @@ export default function About() {
 
                 <motion.div initial={{ opacity: 0, y: 50}} whileInView={{ opacity: 1, y: 0}} transition={{ duration: 0.9, ease: "easeOut"}} viewport={{ once: true }}>
                     <p className="text-sm md:text-base lg:text-lg font-be-vietnam-pro leading-relaxed text-neutral-200">
-                        Outside of my tech life, I enjoy reading, traveling, and learning new languages. Maintenant, je parle un peu français.
+                        Outside of my tech life, I enjoy reading, traveling, and learning new languages. Maintenant, je parle un peu français. 
                     </p>
                 </motion.div>
 

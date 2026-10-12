@@ -7,7 +7,7 @@ export default function Experience() {
     {
         company: "University of Central Florida",
         title: "Researcher",
-        dates: "June 2026 - Present",
+        dates: "May 2026 - August 2026",
         bullets: [
             "Collaborating with clinical researchers to perform precise annotations on ultrasound scans, curating 'ground truth' datasets to train computer vision models on pancreatic masses.",
             "Managing dataset onboarding and quality control, ensuring medical image files and clinical data meet structural requirements for machine learning training pipelines.",
