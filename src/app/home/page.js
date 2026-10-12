@@ -24,8 +24,7 @@ export default function Home() {
                 </p>
 
                 <p className="font-be-vietnam-pro text-xs md:text-sm lg:text-base text-white text-center mt-4">
-                    CS undergrad & researcher. Currently using computer vision techniques to train ML models in the medical field 
-                    and making my own little fun projects on the side.  
+                    CS undergrad & researcher. Currently preparing to set out to the real world as I approach the end of my undergrad 🦦.  
                 </p> 
             </div>
                 
